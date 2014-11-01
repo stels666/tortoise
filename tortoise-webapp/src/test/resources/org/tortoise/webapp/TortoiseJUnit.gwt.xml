@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.tortoise.webapp.Tortoise' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/Tortoise/greet" class="org.tortoise.webapp.server.GreetingServiceImpl" />
+
+</module>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_4.xsd">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>greetServlet</servlet-name>
+		<servlet-class>org.tortoise.webapp.server.GreetingServiceImpl
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>greetServlet</servlet-name>
+		<url-pattern>/Tortoise/greet</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+
+
+	<servlet>
+		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
+		<servlet-class>org.spring4gwt.server.SpringGwtRemoteServiceServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
+		<url-pattern>/org.tortoise.webapp.client.Tortoise/mu/*</url-pattern>
+	</servlet-mapping>
+
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:/applicationContext.xml
+		</param-value>
+	</context-param>
+
+	<welcome-file-list>
+		<welcome-file>Tortoise.html</welcome-file>
+	</welcome-file-list>
+
+
+</web-app>

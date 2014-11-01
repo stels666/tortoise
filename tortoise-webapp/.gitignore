@@ -1,0 +1,6 @@
+/target/
+/TortoiseTest-dev.launch
+/TortoiseTest-prod.launch
+/.classpath
+/.project
+/.settings/
