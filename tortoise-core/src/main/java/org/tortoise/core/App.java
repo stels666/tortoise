@@ -1,6 +1,5 @@
 package org.tortoise.core;
 
-import org.springframework.beans.factory.config.BeanDefinition;
 
 /**
  * Hello world!
